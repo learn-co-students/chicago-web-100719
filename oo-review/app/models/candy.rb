@@ -13,7 +13,7 @@ class Candy
   end
 
   def self.all
-    p "running class method"
+    # p "running class method"
     @@all
   end
 
