@@ -1,4 +1,4 @@
-class CreateHands < ActiveRecord::Migration[6.0]
+class CreateHands < ActiveRecord::Migration[5.2]
   def change
     create_table :hands do |t|
       t.string :title

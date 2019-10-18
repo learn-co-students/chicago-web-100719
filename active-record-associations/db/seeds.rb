@@ -28,12 +28,12 @@ ace_spades = Card.find_by(suit: "spades", rank: "ace")
 # Create a hand that will contain the cards I need
 royal_flush = Hand.new(title: "royal flush", aka: "royale with flush")
 
-# Use the method provided by "has_many" to associate cards with their hand
-royal_flush.cards << ten_spades
-royal_flush.cards << jack_spades
-royal_flush.cards << queen_spades
-royal_flush.cards << king_spades
-royal_flush.cards << ace_spades
-
-# Verify the association works
-puts royal_flush.all_card_names
+# # Use the method provided by "has_many" to associate cards with their hand
+# royal_flush.cards << ten_spades
+# royal_flush.cards << jack_spades
+# royal_flush.cards << queen_spades
+# royal_flush.cards << king_spades
+# royal_flush.cards << ace_spades
+#
+# # Verify the association works
+# puts royal_flush.all_card_names
