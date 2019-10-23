@@ -6,3 +6,24 @@
   * Method should increase miles by the distance
   * Method should decrease fuel by distance * .1
   * Should throw an error if there is not enough fuel
+
+```
+rspec --init
+```
+
+```
+describe "behavior" do 
+ it "produces outcome" do
+  expect(behavior).to eq(outcome)
+ end
+end
+```
+
+``` 
+ before(:each) do
+  @object = Object.new
+ end
+```
+ 
+ 
+[RSpec Docs](https://rspec.info/documentation/)
