@@ -1,0 +1,9 @@
+<h1>Edit <%=@shark.name%></h1>
+<form action="/sharks/<%=@shark.id%>" method="post">
+  <input type="hidden" name="_method" value="put">
+  Name: <input type="text" name="name" value=<%=@shark.name%>>
+  Species: <input type="text" name="species" value=<%=@shark.species%>>
+  Length: <input type="text" name="length" value=<%=@shark.length%>>
+  Location: <input type="text" name="region" value=<%=@shark.region%>>
+  <input type="submit">
+</form>
