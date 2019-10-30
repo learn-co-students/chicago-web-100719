@@ -1,0 +1,18 @@
+<a href="/sharks/<%=@shark.id%>">Back</a>
+<h1>Edit <%=@shark.name%></h1>
+<form action="/sharks/<%=@shark.id%>" method="post">
+  <input type="hidden" name="_method" value="put">
+  Name: <input type="text" name="shark[name]" value=<%=@shark.name%>>
+  Species: <input type="text" name="shark[species]" value=<%=@shark.species%>>
+  Length: <input type="text" name="shark[length]" value=<%=@shark.length%>>
+  Ocean: <select name="shark[ocean_ids][]" id="" multiple>
+    <% @oceans.each do |ocean| %>
+      <% if @shark.oceans.include?(ocean) %>
+        <option value="<%=ocean.id%>" selected><%=ocean.name%></option>
+      <% else %>
+        <option value="<%=ocean.id%>" ><%=ocean.name%></option>
+      <% end %>
+    <% end %>
+  </select>
+  <input type="submit">
+</form>
