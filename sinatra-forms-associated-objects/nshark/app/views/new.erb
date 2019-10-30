@@ -1,0 +1,15 @@
+<a href="/sharks">Back</a>
+
+<h1>New Shark Form</h1>
+<form action="/sharks" method="post">
+  Name: <input type="text" name="shark[name]">
+  Species: <input type="text" name="shark[species]">
+  Length: <input type="text" name="shark[length]">
+  <!-- Location: <input type="text" name="region"> -->
+  Ocean: <select name="shark[ocean_ids][]" id="" multiple>
+    <% @oceans.each do |ocean| %>
+      <option value="<%=ocean.id%>"><%=ocean.name%></option>
+    <% end %>
+  </select>
+  <input type="submit">
+</form>

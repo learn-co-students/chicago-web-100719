@@ -1,0 +1,15 @@
+<a href="/sharks">Back</a>
+<a href="/sharks/<%=@shark.id%>/edit">Edit this shark</a>
+<h2>Say hello to <%=@shark.name%>!</h2>
+<p><b>Species:</b> <%= @shark.species %></p>
+<p><b>Length:</b> <%= @shark.length %> feet</p>
+<p>Found in the <% @shark.oceans.each do |ocean| %>
+    <%= ocean.name %>,
+  <% end %>
+  oceans
+</p>
+<p>Delete this shark?</p>
+<form action="/sharks/<%= @shark.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Chum it!">
+</form>
