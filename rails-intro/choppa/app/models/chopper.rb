@@ -1,0 +1,2 @@
+class Chopper < ApplicationRecord
+end
