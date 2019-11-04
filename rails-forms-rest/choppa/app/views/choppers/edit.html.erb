@@ -1,0 +1,15 @@
+<h1>Edit da choppa!</h1>
+<%= form_with model: @chopper do |f| %>
+  <%= f.label :name, "Name" %>
+  <%= f.text_field :name %>
+  <%= f.label :serial_num, "Serial Number" %>
+  <%= f.number_field :serial_num %>
+  <%= f.label :color, "Color" %>
+  <%= f.text_field :color %>
+  <%= f.label :seating_capacity %>
+  <%= f.number_field :seating_capacity %>
+  <%= f.submit "Get to da choppa!" %>
+<% end %>
+<%= form_with model: @chopper, method: "delete" do |f| %>
+  <%= f.submit "Delete da choppa!" %>
+<% end %>

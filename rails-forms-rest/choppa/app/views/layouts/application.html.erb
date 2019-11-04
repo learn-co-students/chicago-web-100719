@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      header {border: 1px solid black; width: 50%; padding: 5px; font-size: 24px;}
+    </style>
+    <title>Choppa</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header >When you need to get out fast, get to da Choppa!🚁
+    <br> <a href="/choppers/about">About</a> - <a href="/choppers/new">New Choppa!</a>
+      - <a href="/choppers">See our choppas</a>
+    </header>
+    <%= yield %>
+  </body>
+</html>
