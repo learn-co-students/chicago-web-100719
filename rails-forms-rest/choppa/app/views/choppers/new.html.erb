@@ -1,0 +1,12 @@
+<h1>Make a new choppa</h1>
+<%= form_with model: Chopper.new do |f| %>
+  <%= f.label :name, "Name" %>
+  <%= f.text_field :name %>
+  <%= f.label :serial_num, "Serial Number" %>
+  <%= f.number_field :serial_num %>
+  <%= f.label :color, "Color" %>
+  <%= f.text_field :color %>
+  <%= f.label :seating_capacity %>
+  <%= f.number_field :seating_capacity %>
+  <%= f.submit "Get to da choppa!" %>
+<% end %>
