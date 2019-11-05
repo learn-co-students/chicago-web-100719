@@ -1,0 +1,6 @@
+<%= form_with model: @user do |f| %>
+  <%= f.label :name, "Name" %>
+  <%= f.text_field :name %>
+  <%= f.collection_select(:movie_id, @movies, :id, :title) %>
+  <%= f.submit %>
+<% end %>
