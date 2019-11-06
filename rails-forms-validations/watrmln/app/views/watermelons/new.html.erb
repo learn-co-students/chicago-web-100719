@@ -1,0 +1,22 @@
+<h1>Make a new watermelon!</h1>
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+    <p><%= error %></p>
+  <% end %>
+<% end %>
+<%= form_with model: Watermelon.new do |f| %>
+  <%= f.label :nickname, "Nickname" %>
+  <%= f.text_field :nickname %>
+  <%= f.label :shape, "Shape" %>
+  <select name="watermelon[shape]" id="">
+    <option value="cube">Cube</option>
+    <option value="sphere">Sphere</option>
+    <option value="ovoid">Ovoid</option>
+  </select>
+  <%= f.label :weight, "Weight" %>
+  <%= f.number_field :weight %>
+  <%= f.label :seedcount, "Seedcount" %>
+  <%= f.number_field :seedcount %>
+  <%= f.submit %>
+
+<% end %>
