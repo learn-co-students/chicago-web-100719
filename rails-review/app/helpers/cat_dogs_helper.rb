@@ -1,0 +1,2 @@
+module CatDogsHelper
+end

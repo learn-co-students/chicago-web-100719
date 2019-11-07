@@ -1,0 +1,9 @@
+<h1>TADA!</h1>
+
+<%= @cat_dog.name %>
+
+<h3>My rented beds</h3>
+
+<% @cat_dog.rented_beds.each do |bed| %>
+  <%= link_to bed.description, pet_bed_path(bed)  %>
+<% end %>
