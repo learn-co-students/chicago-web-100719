@@ -1,0 +1,7 @@
+<h1>Profile page for <%= @user.username %></h1>
+
+<h3>Welcome! Great to see you. You're logged in as user number <%= session[:user_id] %></h3>
+
+<%= link_to "Log in!", login_path %>
+
+<%= link_to "Log out!", logout_path, method: :delete %>
