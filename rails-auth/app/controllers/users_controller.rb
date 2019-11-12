@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
+  before_action :authorize!, only: [:index, :show]
+
   def new
+    p session[:user_id]
     @user = User.new
   end
 
@@ -10,7 +13,13 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(id: params[:id])
+    if id_matches_current_user?(params[:id])
+      @user = User.find_by(id: params[:id])
+      render :show
+    else
+      flash[:notice] = "ah ah ah! Not THAT user, you sneaky"
+      redirect_to user_path(session[:user_id])
+    end
   end
 
   private

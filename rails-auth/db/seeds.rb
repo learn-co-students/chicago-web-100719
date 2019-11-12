@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+thought = DeepThought.create(title: "Deepest secret", body: "never saw Titanic, not even a little", user_id: 1)

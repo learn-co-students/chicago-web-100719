@@ -1,5 +1,6 @@
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   has_secure_password
+  has_many :deep_thoughts
   # def password=(new_password)
   #   digest = BCrypt::Password.create(new_password)
   #   self.password_digest = digest

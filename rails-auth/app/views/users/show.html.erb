@@ -1,6 +1,21 @@
+<% if flash[:notice] %>
+  <p><%= flash[:notice] %></p>
+<% end %>
+
+
+
 <h1>Profile page for <%= @user.username %></h1>
 
-<h3>Welcome! Great to see you. You're logged in as user number <%= session[:user_id] %></h3>
+<h3>Welcome! Great to see you. You're logged in as user name <%= User.find(session[:user_id]).username %></h3>
+
+<p>New deep thought to record? Please click <%= link_to "here!", new_deep_thought_path %></p>
+
+<% if @user.id == current_user.id %>
+  <% @user.deep_thoughts.each do |thought| %>
+    <h2><%= thought.title %></h2>
+    <p><%= thought.body %></p>
+  <% end %>
+<% end %>
 
 <%= link_to "Log in!", login_path %>
 

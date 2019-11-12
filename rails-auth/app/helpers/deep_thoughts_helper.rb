@@ -1,0 +1,2 @@
+module DeepThoughtsHelper
+end

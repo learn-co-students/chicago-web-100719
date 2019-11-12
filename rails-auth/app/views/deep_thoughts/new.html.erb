@@ -1,0 +1,11 @@
+<% if flash[:error] %>
+  <h3><%= flash[:error] %></h3>
+<% end %>
+
+<%= form_with model: @deep_thought do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+  <%= f.submit %>
+<% end %>
